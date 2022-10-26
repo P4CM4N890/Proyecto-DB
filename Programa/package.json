@@ -1,0 +1,23 @@
+{
+  "name": "consultorio",
+  "version": "1.0.0",
+  "description": "Programa para un consultorio de homeopatía",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P4CM4N890/Proyecto-DB.git"
+  },
+  "author": "P4CM4N890",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/P4CM4N890/Proyecto-DB/issues"
+  },
+  "homepage": "https://github.com/P4CM4N890/Proyecto-DB#readme",
+  "dependencies": {
+    "electron": "^21.2.0",
+    "pg": "^8.8.0"
+  }
+}
