@@ -1,0 +1,84 @@
+#cuerpo {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #F1FFEC; 
+    font-family: sans-serif !important;
+    font-size: 16px;
+}
+
+.login {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 35%;
+    height: 40%;
+    margin: auto;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.imagen {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    background-color: #A6FA89;
+    border-radius: 100%;
+}
+
+#nombre {
+    margin-top: -10%;
+}
+
+#nombre img {
+    width: 80%;
+}
+
+.formulario {
+    margin: 40px auto;
+    width: 40%;
+}
+
+.input-login {
+    background-color: #D9FFCC !important;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    border: none !important;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.input-login::placeholder {
+    color: #83987B !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.boton {
+    background-color: #A6FA89 !important;
+    border-radius: 50px !important;
+    font-weight: bolder !important;
+    margin-left: 50%;
+}
+
+.botones {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.agrupar-botones {
+    width: 100%;
+}
+
+.switch {
+    margin-top: 4%  !important;
+    width: 45px !important;
+    height: 20px !important;
+    background-color: #CDCDCD !important;
+}
+
+.switch:checked {
+    background-color: #A6FA89 !important;
+}
