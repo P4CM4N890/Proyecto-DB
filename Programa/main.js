@@ -2,6 +2,7 @@ const {app, BrowserWindow, Menu, ipcMain} = require('electron');
 const Main = require('electron/main');
 
 let login;
+let ventanaPrincipal;
 
 function createLogin() {
     login = new BrowserWindow({
@@ -21,6 +22,25 @@ function createLogin() {
     });
 }
 
+function createVentanaPrincipal() {
+    ventanaPrincipal = new BrowserWindow({
+        // parent: login,
+        width: 900,
+        height: 600,
+        title: 'Menú',
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        }
+    });
+
+    ventanaPrincipal.loadFile('html/ventanaPrincipal.html');
+    
+    ventanaPrincipal.on('closed', function() {
+        ventanaPrincipal = null;
+    })
+}
+
 app.whenReady().then(createLogin);
 
 app.on('window-all-closed', function() {
@@ -32,3 +52,8 @@ app.on('window-all-closed', function() {
 ipcMain.on('Prueba', function() {
     login.webContents.send('Prueba');
 });
+
+ipcMain.on('openVentanaPrincipal', (event, arg) => {
+    createVentanaPrincipal();
+    login.close();
+})

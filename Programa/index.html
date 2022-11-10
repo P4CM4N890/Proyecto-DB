@@ -12,10 +12,10 @@
     <div class="login">
         <div class="logo">
             <div class="imagen">
-                
+                <img src="img/logo.png">
             </div>
             <div id="nombre">
-                <img src="img/name.png" alt="">
+                <img src="img/name.png">
             </div>
         </div>
         <div class="formulario">
@@ -27,13 +27,18 @@
                     <input type="text" id="form12" placeholder="C O N T R A S E Ñ A" class="form-control input-login" />
                 </div>
                 <div class="botones">
-                    <div class="form-check form-switch agrupar-botones">
-                        <input class="form-check-input switch" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                        <label class="form-check-label" for="flexSwitchCheckDefault"></label><button type="button" class="btn boton">E N T R A R</button>
-                    </div>
+                    <button type="button" class="btn boton" onclick="goto()">E N T R A R</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script>
+        const ipc = window.require('electron').ipcRenderer;
+
+        function goto() {
+            ipc.send('openVentanaPrincipal');
+        }
+    </script>
 </body>
 </html>
