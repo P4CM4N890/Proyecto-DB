@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/boostrap.min.css">
     <title>Menú</title>
 </head>
-<body>
-    <h1>Prueba</h1>
+<body id="cuerpo">
+    <h1>Prueba de boton a Crear Pacientes</h1>
+    <div>
+        <button type="button" onclick="goto()">Agregar Paciente</button>
+    </div>
+
+    <h1>Prueba de boton Angendar Cita</h1>
+    <div>
+        <button type="button" onclick="goto()">Agendar Cita</button>
+    </div>
+
+   <script>
+       const ipc = window.require('electron').ipcRenderer;
+
+       function goto() {
+           ipc.send('openVentanaPaciente');
+       }
+       function goto() {
+           ipc.send('openVentanaCita');
+       }
+   </script>
+
+   <script>
+    const ipd = window.require('electron').ipcRenderer;
+
+    function goto() {
+        ipd.send('openVentanaCita');
+    }
+    </script>
 </body>
 </html>

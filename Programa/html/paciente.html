@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/boostrap.min.css" rel="stylesheet">
+    <title>Agregar Paciente</title>
+</head>
+<body id="cuerpo">
+    <div class="formulario">
+        <form action="">
+            <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre"/>
+            <br>
+            <label for="apellidoP">Apellido Paterno:</label><br>
+                <input type="text" id="apellidoP" name="apellidoP" placeholder="Apellido Paterno"/>
+            <br>
+            <label for="apellidoM">Apellido Materno:</label><br>
+                <input type="text" id="apellidoM" name="apellidoM" placeholder="Apellido Materno"/>
+            <br>
+            <label for="fechaNacimeinto">Fecha de Nacimiento:</label><br>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento"/>
+            <br>
+            <label for="edad">Edad:</label><br>
+                <input type="number" id="edad" name="edad"/>
+            <br>
+            <label for="genero">Genero:</label>
+                <input type="radio" name="genero" value="Hombre" />Hombre
+                <input type="radio" name="genero" value="Mujer" />Mujer
+                <input type="radio" name="genero" value="Otro" />Otro
+            <br>
+            <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccio" name="direccion" placeholder="Dirección"/>
+            <br>
+            <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" placeholder="33-33-33-33-33" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required/>
+            <br><br>
+
+            <div>
+                <button type="button" class="btn boton" onclick="goto()">G U A R D A R </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const ipc = window.require('electron').ipcRenderer;
+
+        function goto() {
+            ipc.send('regresaVentanaPrincipal');
+        }
+    </script>
+</body>
+</html>
