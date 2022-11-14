@@ -13,9 +13,12 @@ const pool = new Pool(config);
 const getPatients = async () => {
     try{
         const answ = await pool.query("select * from paciente;");
-        // console.log(answ.rows);
-        // console.log(typeof(answ.rows));
-        // document.getElementById('test').innerHTML = answ.rows[0].nombre;
+        tam = answ.rows.length
+
+        for(i = 0; i < tam; i++){
+            
+            document.getElementById('test').innerHTML += '<li>' + answ.rows[i].nombre + '</li>';
+        }
     } catch(e){
         console.log('Error al obtener los pacientes')
     }
