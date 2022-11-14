@@ -18,18 +18,10 @@
             <br>
 
             <div>
-                <button type="button" class="btn boton" onclick="goto()">Agendar</button>
+                <button type="button" class="btn boton" onclick="location.href = 'ventanaPrincipal.html'">Agendar</button>
             </div>
 
         </form>
     </div>
-
-    <script>
-        const ipc = window.require('electron').ipcRenderer;
-
-        function goto() {
-            ipc.send('returnVentanaPrincipal');
-        }
-    </script>
 </body>
 </html>

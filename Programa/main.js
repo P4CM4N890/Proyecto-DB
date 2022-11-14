@@ -3,8 +3,6 @@ const Main = require('electron/main');
 
 let login;
 let ventanaPrincipal;
-let paciente;
-let cita;
 
 function createLogin() {
     login = new BrowserWindow({
@@ -28,56 +26,20 @@ function createVentanaPrincipal() {
     ventanaPrincipal = new BrowserWindow({
         // parent: login,
         width: 900,
-        height: 600,
+        height: 660, // 640 en caso de no tener el menú
         title: 'Menú',
+        resizable: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-        }
+        },
     });
 
     ventanaPrincipal.loadFile('html/ventanaPrincipal.html');
+    // ventanaPrincipal.setMenu(null);
     
     ventanaPrincipal.on('closed', function() {
         ventanaPrincipal = null;
-    })
-}
-
-function createPaciente() {
-    paciente = new BrowserWindow({
-        // parent: login,
-        width: 900,
-        height: 600,
-        title: 'Agreagr Paciente',
-        webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false,
-        }
-    });
-
-    paciente.loadFile('html/paciente.html');
-    
-    paciente.on('closed', function() {
-        paciente = null;
-    })
-}
-
-function createCita() {
-    cita = new BrowserWindow({
-        // parent: login,
-        width: 700,
-        height: 450,
-        title: 'Agendar Cita',
-        webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false,
-        }
-    });
-
-    cita.loadFile('html/cita.html');
-    
-    cita.on('closed', function() {
-        cita = null;
     })
 }
 
@@ -96,24 +58,4 @@ ipcMain.on('Prueba', function() {
 ipcMain.on('openVentanaPrincipal', (event, arg) => {
     createVentanaPrincipal();
     login.close();
-})
-
-ipcMain.on('openVentanaPaciente', (event, arg) => {
-    createPaciente();
-    ventanaPrincipal.close();
-})
-
-ipcMain.on('regresaVentanaPrincipal', (event, arg) => {
-    createVentanaPrincipal();
-    paciente.close();
-})
-
-ipcMain.on('openVentanaCita', (event, arg) => {
-    createCita();
-    ventanaPrincipal.close();
-})
-
-ipcMain.on('returnVentanaPrincipal', (event, arg) => {
-    createVentanaPrincipal();
-    cita.close();
 })

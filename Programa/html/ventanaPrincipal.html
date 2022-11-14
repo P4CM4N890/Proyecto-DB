@@ -4,38 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/boostrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/boostrap.min.css">
     <title>Menú</title>
 </head>
 <body id="cuerpo">
-    <h1>Prueba de boton a Crear Pacientes</h1>
-    <div>
-        <button type="button" onclick="goto()">Agregar Paciente</button>
+    <div class="ventana">
+        <header>
+            <img src="../img/logo.png" class="logo-ventanas">
+        </header>
+        
+        <div class="contendor">
+            <div class="botones-menu">
+                <div class="boton-individual boton-citas">
+
+                    <button type="button" class="btn botonC" onclick="location.href = 'citas.html'">C I T A S</button>
+
+                </div><div class="boton-individual boton-medicamentos">
+
+                    <button type="button" class="btn botonC" onclick="location.href = 'medicamentos.html'">M E D I C A M E N T O S</button>
+
+                </div>
+                <div class="boton-individual boton-pacientes">
+
+                    <button type="button" class="btn botonC" onclick="location.href = 'pacientes.html'">P A C I E N T E S</button>
+
+                </div><div class="boton-individual boton-consultas">
+
+                    <button type="button" class="btn botonC" onclick="location.href = 'consultas.html'">C O N S U L T A S</button>
+
+                </div>
+            </div><div class="informacion">
+                <p id="fechaInfo"></p>
+            </div>
+            <div class="citas-bloque"></div><div class="medicamentos-bloque"></div>
+        </div>
     </div>
-
-    <h1>Prueba de boton Angendar Cita</h1>
-    <div>
-        <button type="button" onclick="goto()">Agendar Cita</button>
-    </div>
-
-   <script>
-       const ipc = window.require('electron').ipcRenderer;
-
-       function goto() {
-           ipc.send('openVentanaPaciente');
-       }
-       function goto() {
-           ipc.send('openVentanaCita');
-       }
-   </script>
-
-   <script>
-    const ipd = window.require('electron').ipcRenderer;
-
-    function goto() {
-        ipd.send('openVentanaCita');
-    }
-    </script>
+    <script src="../js/funciones.js"></script>
 </body>
 </html>
