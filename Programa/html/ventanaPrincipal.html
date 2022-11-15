@@ -18,26 +18,63 @@
             <div class="botones-menu">
                 <div class="boton-individual boton-citas">
 
-                    <button type="button" class="btn botonC" onclick="location.href = 'citas.html'">C I T A S</button>
-
+                    <button type="button" class="btn botonC" onclick="location.href = 'citas.html'">
+                        <div>
+                            <div>C I T A S</div>
+                            <div><img src="../img/calendar.svg"></div>
+                        </div>
+                    </button>
                 </div><div class="boton-individual boton-medicamentos">
 
-                    <button type="button" class="btn botonC" onclick="location.href = 'medicamentos.html'">M E D I C A M E N T O S</button>
+                    <button type="button" class="btn botonC" onclick="location.href = 'medicamentos.html'">
+                        <div>
+                            <div>M E D I C A M E N T O S</div>
+                            <div><img src="../img/medication.svg" class="iconos"></div>
+                        </div>
+                    </button>
 
                 </div>
                 <div class="boton-individual boton-pacientes">
 
-                    <button type="button" class="btn botonC" onclick="location.href = 'pacientes.html'">P A C I E N T E S</button>
+                    <button type="button" class="btn botonC" onclick="location.href = 'pacientes.html'">
+                        <div>
+                            <div>P A C I E N T E S</div>
+                            <div><img src="../img/user--data.svg"></div>
+                        </div>
+                    </button>
 
                 </div><div class="boton-individual boton-consultas">
 
-                    <button type="button" class="btn botonC" onclick="location.href = 'consultas.html'">C O N S U L T A S</button>
+                    <button type="button" class="btn botonC" onclick="location.href = 'consultas.html'">
+                        <div>
+                            <div>C O N S U L T A S</div>
+                            <div><img src="../img/report--data.svg" class="iconos"></div>
+                        </div>
+                    </button>
 
                 </div>
             </div><div class="informacion">
                 <p id="fechaInfo"></p>
+                <div class="botones-info">
+                    <div class="boton-conf">
+                        <button type="button" class="btn botonInfo" onclick="location.href = 'configuracion.html'"><img src="../img/user--settings.svg"></button> 
+                    </div><div class="boton-salir">
+                        <button type="button" class="btn botonInfo" onclick=""><img src="../img/logout.svg"></button>
+                    </div>
+                </div>
+                <p id="horaInfo"></p>
             </div>
-            <div class="citas-bloque"></div><div class="medicamentos-bloque"></div>
+            <div class="citas-bloque">
+                <p class="tituloCitas">C I T A S</p>
+                <div class="contenedorCitas">
+
+                </div>
+            </div><div class="medicamentos-bloque">
+                <p class="tituloMedicamentos">R E P O S I C I Ó N</p>
+                <div class="contenedorMedicamentos">
+                    
+                </div>
+            </div>
         </div>
     </div>
     <script src="../js/funciones.js"></script>
