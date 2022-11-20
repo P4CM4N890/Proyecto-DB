@@ -15,7 +15,16 @@
         </header>
 
         <div class="contendor">
-            <button onclick="setPatients()">prueba</button>
+            <form action="javascript:void(0)" name="pacienteForm" onsubmit="getValues()">
+                <input class="inputP nombreP" type="text" placeholder="NOMBRE(S)" required>
+                <input class="inputP apellidos" type="text" placeholder="APELLIDO PATERNO" required>
+                <input class="inputP apellidos" type="text" placeholder="APELLIDO MATERNO" required>
+                <input class="inputP telP" type="tel" placeholder="TELÉFONO" maxlength="10" pattern="[0-9]{10}" required>
+                <input class="inputP edad" type="number" placeholder="EDAD" maxlength="2" pattern="[0-9]{2}" required>
+                <input class="inputP generoP" type="text" placeholder="GÉNERO" maxlength="1" required pattern="[fm]">
+                <input class="inputP dirP" type="text" placeholder="DOMICILIO" required>
+                <button class="botonFormP" type="submit">AÑADIR</button>
+            </form>
         </div>
     </div>
     <script src="../db/conexión.js"></script>

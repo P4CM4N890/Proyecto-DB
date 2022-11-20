@@ -26,19 +26,44 @@ const getPatients = async () => {
     }
 }
 
+paciente = [];
+
 const setPatients = async () => {
     try{
-        const insert = 'insert into paciente (id_paciente, nombre, apellido_paterno, apellido_materno, telefono, edad, genero, direccion) values ($1, $2, $3, $4, $5, $6, $7, $8)';
-        
-        const values = [5, 'Gerardo', 'Hernandez', 'De la Oca', '6677195775', '56', 'm', 'Calle Enrique Segobiano #3568'];
+        const insert = 'insert into paciente (nombre, apellido_paterno, apellido_materno, telefono, edad, genero, direccion) values ($1, $2, $3, $4, $5, $6, $7)';
 
-        const anws = await pool.query(insert, values);
+        const anws = await pool.query(insert, paciente);
         console.log(anws);
         pool.end();
 
     }catch(e){
         console.log(e);
     }
+}
+
+function getValues() {
+    const form = document.forms['pacienteForm'];
+    const registro = {
+        'nombres' : form.elements[0].value,
+        'apellidoP' : form.elements[1].value,
+        'apellidoM' : form.elements[2].value,
+        'tel' : form.elements[3].value,
+        'edad' : form.elements[4].value,
+        'gen' : form.elements[5].value,
+        'dir' : form.elements[6].value,
+    };
+    paciente.push(registro.nombres);
+    paciente.push(registro.apellidoP);
+    paciente.push(registro.apellidoM);
+    paciente.push(registro.tel);
+    paciente.push(registro.edad);
+    paciente.push(registro.gen);
+    paciente.push(registro.dir);
+    form.reset();
+    console.log(paciente);
+    
+    setPatients();
+    paciente = []
 }
 
 getPatients();

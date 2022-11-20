@@ -61,6 +61,7 @@ function createModalP() {
 
     ventanaModalP.on('closed', function(){
         ventanaModalP = null;
+        ventanaPrincipal.reload();
     })
 }
 

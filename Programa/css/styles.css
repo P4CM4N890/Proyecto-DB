@@ -405,6 +405,8 @@ p {
 
 }
 
+/* Modal Paciente */
+
 .tituloModalP {
     margin-top: 15px;
     font-size: 22px;
@@ -417,4 +419,47 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.inputP {
+    background-color: #D9FFCC;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 0px #B5C0B2;
+    text-align: center;
+    height: 40px;
+}
+
+.nombreP {
+    width: 250px;
+    margin: 20px 0 0 8px;
+}
+
+.apellidos {
+    width: 200px;
+}
+
+.telP {
+    width: 157px;
+}
+
+.edad, .generoP {
+    width: 80px;
+}
+
+.dirP {
+    width: 280px;
+}
+
+.botonFormP {
+    background-color: #A6FA89;
+    width: 90px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 0px #B5C0B2;
+}
+
+input:focus{
+    outline-color: #B5C0B2;
 }
