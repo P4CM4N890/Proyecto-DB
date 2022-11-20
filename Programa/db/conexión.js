@@ -59,8 +59,9 @@ function getValues() {
     paciente.push(registro.edad);
     paciente.push(registro.gen);
     paciente.push(registro.dir);
+
     form.reset();
-    console.log(paciente);
+    form.elements[0].focus();
     
     setPatients();
     paciente = []

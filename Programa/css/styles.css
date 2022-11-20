@@ -439,12 +439,22 @@ p {
     width: 200px;
 }
 
+.aP {
+    margin-left: 20px;
+}
+
+.aM {
+    margin: 40px 0 0 8px;
+}
+
 .telP {
     width: 157px;
+    margin-left: 60px;
 }
 
 .edad, .generoP {
     width: 80px;
+    margin: 40px 8px 0 8px;
 }
 
 .dirP {
@@ -458,8 +468,10 @@ p {
     border: none;
     border-radius: 15px;
     box-shadow: 4px 4px 4px 0px #B5C0B2;
+    float: right;
+    margin: 20px 15px 0 0;
 }
 
-input:focus{
+input:focus, button[type=submit] {
     outline-color: #B5C0B2;
 }
