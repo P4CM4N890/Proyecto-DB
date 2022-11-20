@@ -1,3 +1,5 @@
+::-webkit-scrollbar {display: none;}
+
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +13,7 @@
     margin: 0;
     background-color: #F1FFEC; 
     font-family: sans-serif !important;
-    font-size: 16px;
+    overflow: hidden;
 }
 
 /* ----- Login ----- */
@@ -265,4 +267,154 @@ p {
 .contenedorMedicamentos {
     width: 100%;
     height: 70%;
+}
+
+/* Pacientes */
+
+.botonesTodos {
+    width: 100%;
+    height: 120px;
+    display: grid;
+    grid-template-columns: 300px 306px 100px auto;
+}
+
+.botonBack, .botonBuscar {
+    width: 50px;
+    height: 50px;
+    background-color: #A6FA89 !important;
+    border-radius: 15px !important;
+    box-shadow: 4px 4px 4px 0px #B5C0B2;
+}
+
+.botonAgregar {
+    width: 100px;
+    height: 50px;
+    background-color: #A6FA89 !important;
+    border-radius: 15px !important;
+    box-shadow: 4px 4px 4px 0px #B5C0B2;
+}
+
+.tituloP {
+    background-color: #D9FFCC;
+    font-weight: bolder;
+    width: 300px;
+    height: 60px;
+    font-size: 35px;
+    border-radius: 15px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 0px #B5C0B2;
+    padding-top: 5px;
+}
+
+.back {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    padding-right: 100px;
+}
+
+.tituloGrande {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-items: center;
+    display: flex;
+}
+
+.buscar {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.agregar {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    padding-right: 40px;
+}
+
+.buscar, .agregar, .back{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.datos {
+    width: 840px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 110px 110px 110px 110px 80px 85px auto;
+    grid-template-rows: 40px;
+    column-gap: 5px;
+    margin: auto;
+}
+
+.tituloDatos {
+    width: auto;
+    height: 100%;
+    font-weight: bolder;
+    background-color: #A6FA89;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.medios {
+    font-size: 13px;
+}
+
+.datosUno {
+    padding-top: 8px;
+}
+
+.listaPacientes {
+    width: 860px;
+    height: 350px;
+    background-color: #D9FFCC;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 113px 116px 116px 116px 85px 90px 203px;
+    grid-auto-rows: 40px;
+    justify-content: center;
+    row-gap: 5px;
+    text-align: center;
+    line-height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.pacienteUno {
+    background-color: #A6FA89;
+    padding: 5px;
+}
+
+.pacienteDos {
+    background-color: #99E480;
+    padding: 5px;
+}
+
+.primero {
+    border-radius: 15px 0 0 15px;
+}
+
+.ultimo {
+    border-radius: 0 15px 15px 0;
+
+}
+
+.tituloModalP {
+    margin-top: 15px;
+    font-size: 22px;
+    width: 180px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.headerModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

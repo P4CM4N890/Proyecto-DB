@@ -3,6 +3,7 @@ const Main = require('electron/main');
 
 let login;
 let ventanaPrincipal;
+let ventanaModalP;
 
 function createLogin() {
     login = new BrowserWindow({
@@ -43,6 +44,27 @@ function createVentanaPrincipal() {
     })
 }
 
+function createModalP() {
+    ventanaModalP = new BrowserWindow({
+        parent: ventanaPrincipal,
+        width: 500,
+        height: 400,
+        title: 'Agregar',
+        modal: true,
+        resizable: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        },
+    });
+    ventanaModalP.loadFile('html/agregarPaciente.html');
+
+    ventanaModalP.on('closed', function(){
+        ventanaModalP = null;
+    })
+}
+
+
 app.whenReady().then(createLogin);
 
 app.on('window-all-closed', function() {
@@ -58,4 +80,8 @@ ipcMain.on('Prueba', function() {
 ipcMain.on('openVentanaPrincipal', (event, arg) => {
     createVentanaPrincipal();
     login.close();
+})
+
+ipcMain.on('openModalP', (event, arg) => {
+    createModalP();
 })

@@ -11,17 +11,58 @@
 <body id="cuerpo">
     <div class="ventana">
         <header>
-            <img src="../img/logo.png" class="logo-ventanas" onclick="location.href = 'ventanaPrincipal.html'">
+            <img src="../img/logo.png" class="logo-ventanas">
         </header>
         
         <div class="contendor">
-            <div>
-                <ul id="test">
+            <div class="botonesTodos">
+                <div class="back">
+                    <button type="button" class="btn botonBack" onclick="location.href = 'ventanaPrincipal.html'"><img src="../img/arrow--left.svg"></button>
+                </div><div class="tituloGrande">
+                    <p class="tituloP">P A C I E N T E S</p>
+                </div><div class="buscar">
+                    <button type="button" class="btn botonBuscar" onclick=""><img src="../img/search.svg"></button>
+                </div><div class="agregar">
+                    <button type="button" class="btn botonAgregar" onclick="goto()"><img src="../img/add.svg"></button>
+                </div>
+            </div>
+            <div class="datos">
+                <div class="tituloDatos datosUno">
+                    <p>NOMBRE</p>
+                </div>
+                <div class="tituloDatos medios">
+                    <p>APELLIDO PATERNO
+                    </p>
+                </div>
+                <div class="tituloDatos medios">
+                    <p>APELLIDO MATERNO</p>
+                </div>
+                <div class="tituloDatos datosUno">
+                    <p>TELÉFONO</p>
+                </div>
+                <div class="tituloDatos datosUno">
+                    <p>EDAD</p>
+                </div>
+                <div class="tituloDatos datosUno">
+                    <p>GÉNERO</p>
+                </div>
+                <div class="tituloDatos datosUno">
+                    <p>DOMICILIO</p>
+                </div>
+            </div>
+            <div class="listaPacientes" id="con">
 
-                </ul>
             </div>
         </div>
     </div>
     <script src="../db/conexión.js"></script>
+    <script>
+        const ipc = window.require('electron').ipcRenderer;
+
+        function goto() {
+            ipc.send('openModalP');
+            console.log('hola');
+        }
+    </script>
 </body>
 </html>
