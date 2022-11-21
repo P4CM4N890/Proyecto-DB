@@ -1,3 +1,18 @@
+const ipc = window.require('electron').ipcRenderer;
+
+function goto() {
+    ipc.send('openVentanaPrincipal');
+}
+
+function logout() {
+    ipc.send('logOut');
+}
+
+function gotoModalP() {
+    ipc.send('openModalP');
+    console.log('hola');
+}
+
 setInterval(() => {
     // Hora del sistema
     const horaActual = new Date();

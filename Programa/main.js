@@ -79,10 +79,15 @@ ipcMain.on('Prueba', function() {
 });
 
 ipcMain.on('openVentanaPrincipal', (event, arg) => {
-    createVentanaPrincipal();
     login.close();
+    createVentanaPrincipal();
 })
 
 ipcMain.on('openModalP', (event, arg) => {
     createModalP();
+})
+
+ipcMain.on('logOut', (event, arg) => {
+    ventanaPrincipal.close();
+    createLogin();
 })

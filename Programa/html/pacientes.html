@@ -23,7 +23,7 @@
                 </div><div class="buscar">
                     <button type="button" class="btn botonBuscar" onclick=""><img src="../img/search.svg"></button>
                 </div><div class="agregar">
-                    <button type="button" class="btn botonAgregar" onclick="goto()"><img src="../img/add.svg"></button>
+                    <button type="button" class="btn botonAgregar" onclick="gotoModalP()"><img src="../img/add.svg"></button>
                 </div>
             </div>
             <div class="datos">
@@ -56,13 +56,6 @@
         </div>
     </div>
     <script src="../db/conexión.js"></script>
-    <script>
-        const ipc = window.require('electron').ipcRenderer;
-
-        function goto() {
-            ipc.send('openModalP');
-            console.log('hola');
-        }
-    </script>
+    <script src="../js/funciones.js"></script>
 </body>
 </html>
