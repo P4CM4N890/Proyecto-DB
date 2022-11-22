@@ -492,3 +492,11 @@ input:focus, button[type=submit] {
     padding-top: 10px;
     font-size: 25px;
 }
+
+.datosMedicina {
+    grid-template-columns: auto auto;
+}
+
+.listaMedicina {
+    grid-template-columns: 420px 420px;
+}

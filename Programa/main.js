@@ -87,7 +87,7 @@ function createModalSP() {
 }
 
 
-app.whenReady().then(createLogin);
+app.whenReady().then(createVentanaPrincipal);
 
 app.on('window-all-closed', function() {
     if(process.platform !== 'darwin'){
