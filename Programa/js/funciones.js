@@ -10,5 +10,8 @@ function logout() {
 
 function gotoModalP() {
     ipc.send('openModalP');
-    console.log('hola');
+}
+
+function gotoModalM() {
+    ipc.send('openModalM');
 }
