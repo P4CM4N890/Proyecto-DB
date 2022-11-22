@@ -12,7 +12,7 @@ const pool = new Pool(config);
 
 const getPatients = async () => {
     try{
-        const answ = await pool.query("select * from paciente;");
+        const answ = await pool.query("select * from pacientes;");
         tam = answ.rows.length;
 
         for(i = 0; i < tam; i++){
@@ -30,7 +30,7 @@ paciente = [];
 
 const setPatients = async () => {
     try{
-        const insert = 'insert into paciente (nombre, apellido_paterno, apellido_materno, telefono, edad, genero, direccion) values ($1, $2, $3, $4, $5, $6, $7)';
+        const insert = 'insert into pacientes (nombre, apellido_paterno, apellido_materno, telefono, edad, genero, direccion) values ($1, $2, $3, $4, $5, $6, $7)';
 
         const anws = await pool.query(insert, paciente);
         console.log(anws);
