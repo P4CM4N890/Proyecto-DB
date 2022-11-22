@@ -65,6 +65,27 @@ function createModalP() {
     })
 }
 
+function createModalSP() {
+    ventanaModalP = new BrowserWindow({
+        parent: ventanaPrincipal,
+        width: 500,
+        height: 400,
+        title: 'Buscar',
+        modal: true,
+        resizable: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        },
+    });
+    ventanaModalP.loadFile('html/buscarPaciente.html');
+
+    ventanaModalP.on('closed', function(){
+        ventanaModalP = null;
+        ventanaPrincipal.reload();
+    })
+}
+
 
 app.whenReady().then(createLogin);
 
@@ -90,4 +111,8 @@ ipcMain.on('openModalP', (event, arg) => {
 ipcMain.on('logOut', (event, arg) => {
     ventanaPrincipal.close();
     createLogin();
+})
+
+ipcMain.on('searchP', (event, arg) => {
+    createModalSP();
 })

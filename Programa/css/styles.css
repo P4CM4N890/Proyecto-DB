@@ -447,6 +447,10 @@ p {
     margin: 40px 0 0 8px;
 }
 
+.aMB {
+    margin: 20px 0 0 8px;
+}
+
 .telP {
     width: 157px;
     margin-left: 60px;
@@ -474,4 +478,17 @@ p {
 
 input:focus, button[type=submit] {
     outline-color: #B5C0B2;
+}
+
+.datosCitas {
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.listaCitas {
+    grid-template-columns: 140px 225px 230px 120px 120px;
+}
+
+.tituloM {
+    padding-top: 10px;
+    font-size: 25px;
 }

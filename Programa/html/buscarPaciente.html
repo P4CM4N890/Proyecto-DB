@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/boostrap.min.css">
+    <title>Buscar Paciente</title>
+</head>
+<body id="cuerpo">
+    <div class="ventana">
+        <header class="headerModal">
+            <p class="tituloModalP">BUSCAR PACIENTE</p>
+        </header>
+
+        <div class="contendor">
+            <form action="javascript:void(0)" name="pacienteB" onsubmit="getPat()">
+                <input class="inputP nombreP" type="text" placeholder="NOMBRE(S)"  autofocus id="nombrePaciente">
+                <input class="inputP apellidos aP" type="text" placeholder="APELLIDO PATERNO" id="aP">
+                <input class="inputP apellidos aM" type="text" placeholder="APELLIDO MATERNO" id="aM">
+                <input class="inputP telP" type="tel" placeholder="TELÉFONO" maxlength="10" pattern="[0-9]{10}" id="telPa">
+                
+                <input class="inputP edad" type="number" placeholder="EDAD" maxlength="2" pattern="[0-9]{2}" id="edadPa">
+                <input class="inputP generoP" type="text" placeholder="GÉNERO" maxlength="1"  pattern="[fm]" id="genPa">
+                <input class="inputP dirP" type="text" placeholder="DOMICILIO" id="dirPa">
+
+                <button class="botonFormP" type="submit">Buscar</button>
+            </form>
+            <button type="button" class="btn botonFormP" onclick="actualizar()">Actualizar</button>
+            <button type="button" class="btn botonFormP" onclick="eliminar()">Eliminar</button>
+        </div>
+    </div>
+    <script src="../db/conexión.js"></script>
+</body>
+</html>

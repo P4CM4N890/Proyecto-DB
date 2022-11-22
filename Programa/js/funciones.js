@@ -8,6 +8,10 @@ function logout() {
     ipc.send('logOut');
 }
 
+function buscarP() {
+    ipc.send('searchP');
+}
+
 function gotoModalP() {
     ipc.send('openModalP');
 }
