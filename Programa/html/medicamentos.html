@@ -6,17 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/boostrap.min.css">
-    <title>Medicamentos</title>
+    <title>Citas</title>
 </head>
 <body id="cuerpo">
     <div class="ventana">
         <header>
-            <img src="../img/logo.png" class="logo-ventanas" onclick="location.href = 'ventanaPrincipal.html'">
+            <img src="../img/logo.png" class="logo-ventanas">
         </header>
         
         <div class="contendor">
-            
+            <div class="botonesTodos">
+                <div class="back">
+                    <button type="button" class="btn botonBack" onclick="location.href = 'ventanaPrincipal.html'"><img src="../img/arrow--left.svg"></button>
+                </div><div class="tituloGrande">
+                    <p class="tituloP">C I T A S</p>
+                </div><div class="buscar">
+                    <button type="button" class="btn botonBuscar" onclick=""><img src="../img/search.svg"></button>
+                </div><div class="agregar">
+                    <button type="button" class="btn botonAgregar" onclick="gotoModalM()"><img src="../img/add.svg"></button>
+                </div>
+            </div>
+            <div class="datos">
+                <div class="tituloDatos datosUno">
+                    <p>NOMBRE</p>
+                </div>
+                <div class="tituloDatos medios">
+                    <p>APELLIDO PATERNO
+                    </p>
+                </div>
+                <div class="tituloDatos medios">
+                    <p>APELLIDO MATERNO</p>
+                </div>
+                <div class="tituloDatos datosUno">
+                    <p>TELÉFONO</p>
+                </div>
+                <div class="tituloDatos datosUno">
+                    <p>EDAD</p>
+                </div>
+                <div class="tituloDatos datosUno">
+                    <p>GÉNERO</p>
+                </div>
+                <div class="tituloDatos datosUno">
+                    <p>DOMICILIO</p>
+                </div>
+            </div>
+            <div class="listaPacientes" id="medi">
+
+            </div>
         </div>
     </div>
+    <script src="../db/conexión.js"></script>
+    <script src="../js/funciones.js"></script>
 </body>
 </html>

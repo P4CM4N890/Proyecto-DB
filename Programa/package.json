@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/P4CM4N890/Proyecto-DB#readme",
   "dependencies": {
-    "electron": "^21.2.3",
+    "electron": "^21.3.0",
     "pg": "^8.8.0"
-  },
-  "devDependencies": {}
+  }
 }
