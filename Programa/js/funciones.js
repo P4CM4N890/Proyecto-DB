@@ -19,3 +19,7 @@ function gotoModalP() {
 function gotoModalM() {
     ipc.send('openModalM');
 }
+
+function buscarM() {
+    ipc.send('searchM');
+}

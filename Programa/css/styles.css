@@ -500,3 +500,12 @@ input:focus, button[type=submit] {
 .listaMedicina {
     grid-template-columns: 420px 420px;
 }
+
+.botonFormM {
+    margin-top: 40px;
+}
+
+.cantidad {
+    width: 100px;
+    margin: 40px 0 0 15px;
+}

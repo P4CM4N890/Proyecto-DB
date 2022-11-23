@@ -107,6 +107,27 @@ function createModalM() {
     })
 }
 
+function createModalSM() {
+    ventanaModalP = new BrowserWindow({
+        parent: ventanaPrincipal,
+        width: 500,
+        height: 400,
+        title: 'Buscar',
+        modal: true,
+        resizable: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        },
+    });
+    ventanaModalP.loadFile('html/buscarMedicamento.html');
+
+    ventanaModalP.on('closed', function(){
+        ventanaModalP = null;
+        ventanaPrincipal.reload();
+    })
+}
+
 app.whenReady().then(createVentanaPrincipal);
 
 app.on('window-all-closed', function() {
@@ -139,4 +160,8 @@ ipcMain.on('searchP', (event, arg) => {
 
 ipcMain.on('openModalM', (event, arg) => {
     createModalM();
+})
+
+ipcMain.on('searchM', (event, arg) => {
+    createModalSM();
 })
