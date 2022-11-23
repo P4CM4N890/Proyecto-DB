@@ -23,3 +23,11 @@ function gotoModalM() {
 function buscarM() {
     ipc.send('searchM');
 }
+
+function gotoModalC() {
+    ipc.send('openModalC');
+}
+
+function buscarC() {
+    ipc.send('searchC');
+}

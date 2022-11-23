@@ -509,3 +509,16 @@ input:focus, button[type=submit] {
     width: 100px;
     margin: 40px 0 0 15px;
 }
+
+.labelCita {
+    margin-left: 10px;
+}
+
+#fechaCita {
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+.botonFormC {
+    margin-top: 40px;
+}

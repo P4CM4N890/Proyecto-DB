@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/boostrap.min.css">
+    <title>Buscar Cita</title>
+</head>
+<body id="cuerpo">
+    <div class="ventana">
+        <header class="headerModal">
+            <p class="tituloModalP">BUSCAR CITA</p>
+        </header>
+
+        <div class="contendor">
+            <form action="javascript:void(0)" name="pacienteForm" onsubmit="getPat()">
+                <input class="inputP nombreP" type="text" placeholder="NOMBRE(S)"  autofocus id="nombrePaciente">
+                <input class="inputP apellidos aP" type="text" placeholder="APELLIDO PATERNO" id="aP">
+                <input class="inputP apellidos aM" type="text" placeholder="APELLIDO MATERNO" id="aM">
+                <br>
+                <label for="fechaCita" class="labelCita">Fecha:</label>
+                <input type="date" name="fechaCita" class="inputP" id="fechaCita">
+                <label for="horaCita">Hora:</label>
+            <input type="time" name="horaCita" class="inputP" id="horaCita">
+                <button class="botonFormP botonFormC" type="submit">Buscar</button>
+            </form>
+            <button type="button" class="btn botonFormP" onclick="actualizar()">Actualizar</button>
+            <button type="button" class="btn botonFormP" onclick="eliminar()">Eliminar</button>
+        </div>
+    </div>
+    <script src="../db/citas.js"></script>
+</body>
+</html>
