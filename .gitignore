@@ -105,3 +105,7 @@ dist
 
 # package
 package-lock.json
+
+# ejecutable
+
+consultorio-win32-x64
