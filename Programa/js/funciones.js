@@ -31,3 +31,11 @@ function gotoModalC() {
 function buscarC() {
     ipc.send('searchC');
 }
+
+function gotoModalCon() {
+    ipc.send('openModalCon');
+}
+
+function buscarCon() {
+    ipc.send('searchCon');
+}

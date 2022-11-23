@@ -170,6 +170,48 @@ function createModalSC() {
     })
 }
 
+function createModalCon() {
+    ventanaModalP = new BrowserWindow({
+        parent: ventanaPrincipal,
+        width: 500,
+        height: 400,
+        title: 'Buscar',
+        modal: true,
+        resizable: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        },
+    });
+    ventanaModalP.loadFile('html/agregarConsulta.html');
+
+    ventanaModalP.on('closed', function(){
+        ventanaModalP = null;
+        ventanaPrincipal.reload();
+    })
+}
+
+function createModalSCon() {
+    ventanaModalP = new BrowserWindow({
+        parent: ventanaPrincipal,
+        width: 500,
+        height: 400,
+        title: 'Buscar',
+        modal: true,
+        resizable: false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+        },
+    });
+    ventanaModalP.loadFile('html/buscarConsulta.html');
+
+    ventanaModalP.on('closed', function(){
+        ventanaModalP = null;
+        ventanaPrincipal.reload();
+    })
+}
+
 app.whenReady().then(createVentanaPrincipal);
 
 app.on('window-all-closed', function() {
@@ -214,4 +256,12 @@ ipcMain.on('openModalC', (event, arg) => {
 
 ipcMain.on('searchC', (event, arg) => {
     createModalSC();
+})
+
+ipcMain.on('openModalCon', (event, arg) => {
+    createModalCon();
+})
+
+ipcMain.on('searchCon', (event, arg) => {
+    createModalSCon();
 })

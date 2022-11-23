@@ -527,3 +527,11 @@ input:focus, button[type=submit] {
 .botonFormC {
     margin-top: 40px;
 }
+
+.datosConsultas {
+    grid-template-columns: auto auto auto auto;
+}
+
+.listaConsultas {
+    grid-template-columns: 170px 250px 250px 170px;
+}

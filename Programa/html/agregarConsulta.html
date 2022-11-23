@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/boostrap.min.css">
+    <title>Nueva Consulta</title>
+</head>
+<body id="cuerpo">
+    <div class="ventana">
+        <header class="headerModal">
+            <p class="tituloModalP">NUEVA CONSULTA</p>
+        </header>
+
+        <div class="contendor">
+            <form action="javascript:void(0)" name="pacienteForm" onsubmit="getValues()">
+                <input class="inputP nombreP" type="text" placeholder="NOMBRE(S)" required autofocus>
+                <input class="inputP apellidos aP" type="text" placeholder="APELLIDO PATERNO" required>
+                <input class="inputP apellidos aM" type="text" placeholder="APELLIDO MATERNO" required>
+                <input class="inputP apellidos aM" type="text" placeholder="ENFERMEDAD" required>
+                <input class="inputP apellidos aM" type="text" placeholder="SINTOMAS" required>
+                <input class="inputP apellidos aM" type="text" placeholder="ETAPA" required>
+                
+                <button class="botonFormP" type="submit">AÑADIR</button>
+            </form>
+        </div>
+    </div>
+    <script src="../db/consultas.js"></script>
+</body>
+</html>
