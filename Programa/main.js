@@ -193,7 +193,7 @@ ipcMain.on('openModalP', (event, arg) => {
 
 ipcMain.on('logOut', (event, arg) => {
     ventanaPrincipal.close();
-    createLogin();
+    // createLogin();
 })
 
 ipcMain.on('searchP', (event, arg) => {

@@ -245,6 +245,11 @@ p {
 .contenedorCitas {
     width: 100%;
     height: 70%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 120px 120px 120px 100px 100px;
+    grid-template-rows: 40px 40px 40px 40px;
+    row-gap: 5px;
 }
 
 .medicamentos-bloque {
